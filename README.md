@@ -1,4 +1,4 @@
-Summary
+Outline
 -
 This code allows cpp functions to be called from python, showing how to integrate cpp's high speed in a python codebase. I implemented fibonacci in quite possibly the worst way (no memoization) just to more easily compare the speed of both cpp and python.
 
@@ -17,6 +17,8 @@ c++ -O3 -Wall -shared -std=c++17 -fPIC $(python3 -m pybind11 --includes) fibonac
 
 Then run `fibonacci_from_cpp.py` with: `python3 fibonacci_from_cpp.py`
 
+Summary
+-
 On my machine, running the following with `n=50` took
 * `python3 fibonacci.py`: 43 minutes
 * `./fibonacci` (compile with `g++ fibonacci.cpp -o fibonacci`): 1.82 minutes
