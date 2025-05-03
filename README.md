@@ -14,6 +14,7 @@ Compile a linked library file from `fibonacci_lib.cpp` and properly bind it to p
 ```
 c++ -O3 -Wall -shared -std=c++17 -fPIC $(python3 -m pybind11 --includes) fibonacci_lib.cpp -o fibonacci_lib$(python3-config --extension-suffix)
 ```
+After running that command, you should see a file called `fibonacci_lib.cpython-310-x86_64-linux-gnu.so`
 
 Then run `fibonacci_from_cpp.py` with: `python3 fibonacci_from_cpp.py`
 
